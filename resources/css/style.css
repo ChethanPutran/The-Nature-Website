@@ -41,6 +41,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,6 +52,7 @@ body {
   line-height: 1.7;
   font-weight: 300;
   color: var(--color-dark1);
+  overflow-x: hidden;
 }
 
 .container {
@@ -71,7 +73,10 @@ body {
   height: 6.2rem;
   z-index: 1000;
   opacity: 0;
+  transition: all .3s ease;
 }
+
+
 
 .navigation-btn {
   background-color: var(--color-white);
@@ -86,6 +91,11 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: var(--box_shadow-btn);
+  transition: all .3s ease;
+}
+
+.navigation-checkbox:hover~.navigation-btn {
+  transform: scale(1.1);
 }
 
 .navigation-background {
@@ -118,7 +128,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: -1;
   text-align: right;
   opacity: 0;
   width: 0;
@@ -181,6 +191,7 @@ body {
 .navigation-checkbox:checked~.nav {
   width: 100%;
   opacity: 1;
+  z-index: 999;
 }
 
 .navigation-checkbox:checked+.navigation-btn .navigation-icon-close {
@@ -274,13 +285,10 @@ body {
 }
 
 /******************************************** Header ******************************************/
-header {
-  height: 100vh;
-}
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 100vh;
   width: auto;
   background: -webkit-gradient(linear, left top, right top, from(#55c57acc), to(#28b485cc)), url(../images/hero.jpg);
   background: -o-linear-gradient(left, #55c57acc, #28b485cc), url(../images/hero.jpg);
@@ -300,9 +308,15 @@ header {
 }
 
 .logo {
-  height: 3.5rem;
-  width: auto;
+  width: 8rem;
+  transition: all .3s ease;
 }
+
+.logo:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+
 
 /*************************** Utilities ****************************************************/
 .umargin__Bottom__Big {
@@ -423,29 +437,22 @@ header {
   visibility: hidden;
 }
 
-.tour1:target {
+.popup:target {
   opacity: 1;
   visibility: visible;
-  transition: all .3s;
+  transition: all .3s ease-out;
 }
 
-.tour2:target {
-  opacity: 1;
-  visibility: visible;
-  transition: all .3s;
-}
-
-.tour3:target {
-  opacity: 1;
-  visibility: visible;
-  transition: all .3s;
+.popup:target>.popup-container {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transition: all .5s ease-in-out;
+  transform: translate(-50%, -50%) scale(0);
   background: var(--color-white);
   border-radius: var(--border-radius-sm);
   z-index: 2010;
@@ -460,7 +467,6 @@ header {
   justify-content: center;
   flex-shrink: 1;
   transition: all .3s;
-  animation: moveUp 2s ease-out 1.25s;
   position: relative;
 }
 
@@ -1119,8 +1125,13 @@ header {
 }
 
 .footer__logo {
-  width: 15rem;
+  width: 9rem;
   height: auto;
+  transition: all .3s ease-in-out;
+}
+
+.footer__logo:hover {
+  transform: scale(1.1);
 }
 
 .footer__nav {
