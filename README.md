@@ -1,2 +1,2 @@
 # The-Nature-Website
-A website for Nature Enthusiastics .
+A website for Nature Enthusiasts.
