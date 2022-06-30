@@ -1,0 +1,431 @@
+/**
+  0   - 600px - Phone
+600px - 900px - Tablet portrait
+900px - 1200px - Tablet landscape
+1200px - 1800px - Desktop 
+< 1800px - Big Desktop 
+
+
+**/
+/*1800px/16 = 112.5em */
+
+@media screen and (max-width :112.5em) {
+
+    /*1800px**/
+    html {
+        font-size: 68%;
+    }
+
+    .heading-main {
+        font-size: 4.6rem;
+        letter-spacing: 1.9rem;
+    }
+
+    .heading-sub {
+        font-size: 1.6rem;
+        letter-spacing: 1rem;
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width :75em) {
+
+    /*120px**/
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media screen and (max-width :56.25em) {
+
+    /*900px**/
+    html {
+        font-size: 60%;
+    }
+
+    .logo {
+        width: 6rem;
+    }
+
+    .heading-main {
+        font-size: 4.6rem;
+        letter-spacing: 1.5rem;
+    }
+
+    .heading-sub {
+        font-size: 1.6rem;
+        letter-spacing: 7px;
+        font-weight: 300;
+    }
+
+    .heading-secondary {
+        font-size: 3rem;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+        font-size: 1.6rem;
+    }
+
+    .navigation-btn,
+    .navigation-background,
+    .navigation-checkbox {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    /* .row {
+        flex-wrap: wrap;
+    } */
+    .booking {
+        padding-right: 4rem;
+        padding-left: 4rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .booking__form {
+        width: 100%;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+
+    .composition-box {
+        margin-bottom: 50rem;
+    }
+
+    .composition__Photo {
+        width: 60%;
+        position: relative;
+    }
+
+
+    .umargin__Bottom__Big {
+        margin-bottom: 4rem;
+    }
+
+    .umargin__Bottom__Medium {
+        margin-bottom: 2rem;
+    }
+
+    .umargin__Bottom__Small {
+        margin-bottom: .5rem;
+    }
+
+    .umargin__Top__Big {
+        margin-top: 4rem;
+    }
+
+    .umargin__Top__Medium {
+        margin-top: 4rem;
+    }
+
+    .umargin__Top__Small {
+        margin-top: .5rem;
+    }
+
+    .umargin__LeftRight__Big {
+        margin: 0 5rem;
+    }
+
+    .umargin__LeftRight__Medium {
+        margin: 0 3rem;
+    }
+
+    .umargin__LeftRight__Small {
+        margin: 0 1rem;
+    }
+
+
+}
+
+@media screen and (max-width :37.5em) {
+    :root {
+        --card-col-gap: 3rem;
+        --card-row-gap: 3rem;
+    }
+
+    /*600px**/
+    html {
+        font-size: 56.25%;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .logo {
+        width: 5.5rem;
+    }
+
+    .navigation-btn,
+    .navigation-background,
+    .navigation-checkbox {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .nav-list {
+        width: 60%;
+    }
+
+    .nav-link:link {
+        font-size: 2rem;
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .nav-link-num {
+        font-size: 2rem;
+    }
+
+    .heading-main {
+        font-size: 4.2rem;
+        letter-spacing: 1.2rem;
+    }
+
+    .heading-sub {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+        font-weight: 300;
+    }
+
+
+
+    .booking__form {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .heading-secondary {
+        font-size: 2.4rem;
+    }
+
+    .section-about {
+        margin: -10rem 0 3rem 0;
+        padding: 13rem 0;
+    }
+
+    .section-features {
+        margin: -6rem 0 3rem 0;
+        padding-bottom: 4rem 0;
+    }
+
+    .composition__Photo {
+        width: 50%;
+    }
+
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+        font-size: 1.4rem;
+    }
+
+
+
+    .heading-tirtiary {
+        font-size: 3rem;
+    }
+
+    .story {
+        padding: 2rem;
+    }
+
+    .story,
+    .story>* {
+        transform: none;
+    }
+
+    .booking {
+        margin: .5rem;
+    }
+
+
+    .row .col-m-1 {
+        flex: 1 2 100%;
+    }
+
+    .row .col-m-12 {
+        flex: 1 2 50%;
+    }
+
+    .row .col-m-13 {
+        flex: 1 2 33.3333%;
+    }
+
+    .umargin__Bottom__Big {
+        margin-bottom: 4rem;
+    }
+
+    .umargin__Bottom__Medium {
+        margin-bottom: 2rem;
+    }
+
+    .umargin__Bottom__Small {
+        margin-bottom: .5rem;
+    }
+
+    .umargin__Top__Big {
+        margin-top: 4rem;
+    }
+
+    .umargin__Top__Medium {
+        margin-top: 4rem;
+    }
+
+    .umargin__Top__Small {
+        margin-top: .5rem;
+    }
+
+    .umargin__LeftRight__Big {
+        margin: 0 5rem;
+    }
+
+    .umargin__LeftRight__Medium {
+        margin: 0 3rem;
+    }
+
+    .umargin__LeftRight__Small {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width :18.75em) {
+    :root {
+        --card-col-gap: 2rem;
+        --card-row-gap: 2rem;
+    }
+
+    /*300px**/
+    html {
+        font-size: 50%;
+    }
+
+    .logo {
+        width: 5rem;
+    }
+
+    .navigation-btn,
+    .navigation-background,
+    .navigation-checkbox {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .nav-list {
+        width: 80%;
+    }
+
+    .nav-link:link {
+        font-size: 1.8rem;
+    }
+
+    .nav-link-num {
+        font-size: 1.8rem;
+    }
+
+    .heading-main {
+        font-size: 3.5rem;
+        letter-spacing: .8rem;
+    }
+
+    .heading-sub {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
+
+    .heading-secondary {
+        font-size: 2rem;
+    }
+
+
+
+    .heading-tirtiary {
+        font-size: 3rem;
+    }
+
+    .composition__Photo {
+        width: 50%;
+    }
+
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+        font-size: 1.2rem;
+    }
+
+    .section-stories {
+        padding: 0 1rem;
+    }
+
+    .story {
+        padding: 2rem;
+    }
+
+    .story,
+    .story>* {
+        transform: none;
+    }
+
+    .section-stories .row {
+        margin-bottom: 1rem;
+    }
+
+    .booking {
+        margin: .5rem;
+    }
+
+    .umargin__Bottom__Big {
+        margin-bottom: 3rem;
+    }
+
+    .umargin__Bottom__Medium {
+        margin-bottom: 1rem;
+    }
+
+    .umargin__Bottom__Small {
+        margin-bottom: .25rem;
+    }
+
+    .umargin__Top__Big {
+        margin-top: 2rem;
+    }
+
+    .umargin__Top__Medium {
+        margin-top: 2rem;
+    }
+
+    .umargin__Top__Small {
+        margin-top: .25rem;
+    }
+
+    .umargin__LeftRight__Big {
+        margin: 0 2.5rem;
+    }
+
+    .umargin__LeftRight__Medium {
+        margin: 0 1.5rem;
+    }
+
+    .umargin__LeftRight__Small {
+        margin: 0 .5rem;
+    }
+
+    .row .col-s-1 {
+        flex: 1 2 100%;
+    }
+
+    .row .col-sm-12 {
+        flex: 1 2 50%;
+    }
+}

@@ -1,5 +1,6 @@
 @import url(animation.css);
 @import url(grid.css);
+@import url(row-col.css);
 
 :root {
   --color-primary: #7ed56f;
@@ -27,6 +28,8 @@
   --box_shadow-medium1: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   --box_shadow-btn: 0.5rem 0.8rem 1rem rgba(0, 0, 0, 0.2);
   --border-radius-sm: 5px;
+  --card-col-gap: 6rem;
+  --card-row-gap: 6rem;
 }
 
 
@@ -64,13 +67,19 @@ body {
 
 .navigation {}
 
-.navigation-checkbox {
-  display: inline-block;
+
+.navigation-btn,
+.navigation-checkbox,
+.navigation-background {
   position: fixed;
   top: 2.5rem;
   right: 2.5rem;
   width: 6.2rem;
   height: 6.2rem;
+}
+
+.navigation-checkbox {
+  display: inline-block;
   z-index: 1000;
   opacity: 0;
   transition: all .3s ease;
@@ -80,11 +89,6 @@ body {
 
 .navigation-btn {
   background-color: var(--color-white);
-  width: 6.2rem;
-  height: 6.2rem;
-  position: fixed;
-  top: 2.5rem;
-  right: 2.5rem;
   border-radius: 50%;
   z-index: 998;
   display: flex;
@@ -99,12 +103,7 @@ body {
 }
 
 .navigation-background {
-  height: 5.5rem;
-  width: 5.5rem;
   border-radius: 50%;
-  position: fixed;
-  top: 3rem;
-  right: 3rem;
   background-image: radial-gradient(var(--color-primary-light), var(--color-primary-dark));
   z-index: 997;
   transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -138,6 +137,7 @@ body {
 
 
 .nav-list {
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -218,7 +218,7 @@ body {
   backface-visibility: hidden;
 }
 
-.heading__Box {
+.heading-box {
   text-align: center;
   position: absolute;
   top: 50%;
@@ -228,7 +228,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.heading__Main {
+.heading-main {
   text-align: center;
   display: block;
   font-size: 4.2rem;
@@ -236,7 +236,7 @@ body {
   font-weight: 700;
 }
 
-.heading__Sub {
+.heading-sub {
   text-align: center;
   display: block;
   font-size: var(--d-font_size);
@@ -245,8 +245,8 @@ body {
   margin-bottom: 3rem;
 }
 
-.heading__Secondary {
-  font-weight: 3.5rem;
+.heading-secondary {
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -260,14 +260,14 @@ body {
   transition: all 1s;
 }
 
-.heading__Secondary:hover {
+.heading-secondary:hover {
   -webkit-transform: skewY(2deg) skewX(15deg) scale(1.05);
   -ms-transform: skewY(2deg) skewX(15deg) scale(1.05);
   transform: skewY(2deg) skewX(15deg) scale(1.05);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.heading__Tertiary {
+.heading-tertiary {
   font-size: var(--d-font_size);
   font-weight: 700;
   text-transform: uppercase;
@@ -321,39 +321,39 @@ body {
 
 /*************************** Utilities ****************************************************/
 .umargin__Bottom__Big {
-  margin-bottom: 8rem !important;
+  margin-bottom: 8rem;
 }
 
 .umargin__Bottom__Medium {
-  margin-bottom: 4rem !important;
+  margin-bottom: 4rem;
 }
 
 .umargin__Bottom__Small {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem;
 }
 
 .umargin__Top__Big {
-  margin-top: 8rem !important;
+  margin-top: 8rem;
 }
 
 .umargin__Top__Medium {
-  margin-top: 4rem !important;
+  margin-top: 4rem;
 }
 
 .umargin__Top__Small {
-  margin-top: 1rem !important;
+  margin-top: 1rem;
 }
 
 .umargin__LeftRight__Big {
-  margin: 0 10rem !important;
+  margin: 0 10rem;
 }
 
 .umargin__LeftRight__Medium {
-  margin: 0 6rem !important;
+  margin: 0 6rem;
 }
 
 .umargin__LeftRight__Small {
-  margin: 0 2rem !important;
+  margin: 0 2rem;
 }
 
 .section-about {
@@ -376,6 +376,10 @@ body {
   transform: skewY(-6deg);
 }
 
+.feature-row {
+  padding: 0 3rem;
+}
+
 .section-features>* {
   -webkit-transform: skewY(6deg);
   -ms-transform: skewY(6deg);
@@ -396,7 +400,7 @@ body {
 }
 
 .section-stories .row {
-  margin-bottom: 7rem !important;
+  margin-bottom: 7rem;
 }
 
 .section-stories .centerBtn {
@@ -409,12 +413,13 @@ body {
 }
 
 .booking {
+  margin: 0 6rem;
+  padding: 6rem;
+  flex-basis: 100%;
   background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 5%, rgba(255, 255, 255, 0.6) 50%, transparent 50%), url(../images/nat-10.jpg);
   background-size: cover;
-  height: 35rem;
   border-radius: 0.3rem;
   box-shadow: var(--box_shadow-medium1);
-  padding: 6rem;
 }
 
 .booking__form {
@@ -647,32 +652,40 @@ body {
 }
 
 /******************* Composition(Image-Container) **************************/
+.composition-box {
+  height: 100%;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  flex-grow: 2;
+}
+
 .composition {
   position: relative;
+  width: 100%;
 }
 
 .composition__Photo {
   width: 55%;
   box-shadow: var(--box_shadow-medium1);
   border-radius: 2px;
-  position: absolute;
+  position: relative;
   z-index: 5;
   transition: all 0.2s !important;
 }
 
 .composition__Photo__p1 {
-  top: -2rem;
-  left: 0;
+  top: 1%;
+  left: 30%;
 }
 
 .composition__Photo__p2 {
-  top: 2rem;
-  right: 0;
+  top: -10%;
+  right: -9%;
 }
 
 .composition__Photo__p3 {
-  top: 10rem;
-  left: 20%;
+  top: -40%;
+  left: 40%;
 }
 
 .composition__Photo:hover {
@@ -814,25 +827,25 @@ body {
   width: 80%;
 }
 
-.card__heading__span {
+.card__heading-span {
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
-.card__heading__span__orange {
+.card__heading-span__orange {
   background-image: -o-linear-gradient(left top, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
 }
 
-.card__heading__span__green {
+.card__heading-span__green {
   background-image: -o-linear-gradient(left top, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
 }
 
-.card__heading__span__blue {
+.card__heading-span__blue {
   background-image: -o-linear-gradient(left top, rgba(41, 152, 255, 0.85), rgba(138, 43, 226, 0.85));
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(138, 43, 226, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(138, 43, 226, 0.85));

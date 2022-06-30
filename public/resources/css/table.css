@@ -1,0 +1,51 @@
+.row {
+    max-width: 114rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    margin: 0 auto;
+}
+
+.row [class^='col-'] {
+    height: 100%;
+}
+
+/* .row [class^='col-']:not(:last-child) {
+    margin-right: 6rem;
+} */
+
+.row:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.row .col-1-of-2 {
+    flex: 1 2 50%;
+}
+
+.row .col-1-of-3 {
+    flex: 1 2 33.3333333%;
+}
+
+.row .col-2-of-3 {
+    flex: 1 2 66.666666%;
+}
+
+.row .col-1-of-4 {
+    flex: 1 2 25%;
+}
+
+.row .col-2-of-4 {
+    flex: 1 2 50%;
+}
+
+.row .col-3-of-4 {
+    flex: 1 2 75%;
+}
+
+.col-v-c {
+    align-self: center;
+}
+
+.col-h-c {
+    justify-self: center;
+}
