@@ -28,8 +28,6 @@
   --box_shadow-medium1: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   --box_shadow-btn: 0.5rem 0.8rem 1rem rgba(0, 0, 0, 0.2);
   --border-radius-sm: 5px;
-  --card-col-gap: 6rem;
-  --card-row-gap: 6rem;
 }
 
 
@@ -706,6 +704,7 @@ body {
   padding: 2.5rem;
   border-radius: 0.3rem;
   box-shadow: var(--box_shadow-light);
+  height: 100%;
 }
 
 .featureBox__Icon {

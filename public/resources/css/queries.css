@@ -38,13 +38,19 @@
 
 @media screen and (max-width :56.25em) {
 
+
     /*900px**/
     html {
         font-size: 60%;
     }
 
+
     .logo {
         width: 6rem;
+    }
+
+    .header {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 
     .heading-main {
@@ -99,10 +105,48 @@
     }
 
     .composition__Photo {
-        width: 60%;
+        width: 40%;
         position: relative;
     }
 
+    .composition__Photo__p1 {
+        top: 1%;
+        left: 4%;
+    }
+
+    .composition__Photo__p2 {
+        top: -10%;
+        left: 10%;
+    }
+
+    .composition__Photo__p3 {
+        top: -42%;
+        left: 28%;
+    }
+
+    .footer {
+        padding: 9rem 4rem;
+    }
+
+    .footer__logoBox {
+        margin-bottom: 3rem;
+    }
+
+    .footer__logo {
+        width: 8rem;
+    }
+
+    .footer__item {
+        display: block;
+    }
+
+    .footer__link {
+        font-size: 1.6rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.6rem;
+    }
 
     .umargin__Bottom__Big {
         margin-bottom: 4rem;
@@ -144,10 +188,7 @@
 }
 
 @media screen and (max-width :37.5em) {
-    :root {
-        --card-col-gap: 3rem;
-        --card-row-gap: 3rem;
-    }
+
 
     /*600px**/
     html {
@@ -158,8 +199,17 @@
         padding: 0;
     }
 
+    .header__LogoBox {
+        top: 3rem;
+        left: 3rem;
+    }
+
     .logo {
         width: 5.5rem;
+    }
+
+    .header {
+        clip-path: polygon(0 0, 100% 0, 100% 87vh, 0 100%);
     }
 
     .navigation-btn,
@@ -209,24 +259,48 @@
     }
 
     .section-about {
-        margin: -10rem 0 3rem 0;
-        padding: 13rem 0;
+        padding: 14.5rem 1rem 8rem 1rem;
+    }
+
+    .section-tours {
+        padding: 14rem 1rem 8rem 1rem;
+    }
+
+    .section-stories {
+        padding: 19rem 1rem 8rem 1rem;
     }
 
     .section-features {
-        margin: -6rem 0 3rem 0;
-        padding-bottom: 4rem 0;
+        padding: 10rem 1rem 8rem 1rem;
+    }
+
+    .section-booking {
+        padding: 10rem 1rem 10rem 1rem;
     }
 
     .composition__Photo {
         width: 50%;
     }
 
+    .composition__Photo__p1 {
+        top: 1%;
+        left: 4%;
+    }
+
+    .composition__Photo__p2 {
+        top: -10%;
+        left: 21%;
+    }
+
+    .composition__Photo__p3 {
+        top: -42%;
+        left: 40%;
+    }
 
     .btn,
     .btn:link,
     .btn:visited {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
 
@@ -249,6 +323,34 @@
     }
 
 
+    .footer {
+        padding: 6rem 3rem;
+    }
+
+    .footer__logoBox {
+        margin-bottom: 4rem;
+    }
+
+    .footer__logo {
+        width: 7rem;
+    }
+
+    .footer__item {
+        display: block;
+    }
+
+    .footer__link {
+        font-size: 1.4rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.4rem;
+    }
+
+
+
+
+
     .row .col-m-1 {
         flex: 1 2 100%;
     }
@@ -262,11 +364,11 @@
     }
 
     .umargin__Bottom__Big {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 
     .umargin__Bottom__Medium {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .umargin__Bottom__Small {
@@ -274,11 +376,11 @@
     }
 
     .umargin__Top__Big {
-        margin-top: 4rem;
+        margin-top: 2.5rem;
     }
 
     .umargin__Top__Medium {
-        margin-top: 4rem;
+        margin-top: 1rem;
     }
 
     .umargin__Top__Small {
@@ -286,31 +388,36 @@
     }
 
     .umargin__LeftRight__Big {
-        margin: 0 5rem;
-    }
-
-    .umargin__LeftRight__Medium {
         margin: 0 3rem;
     }
 
-    .umargin__LeftRight__Small {
+    .umargin__LeftRight__Medium {
         margin: 0 1rem;
+    }
+
+    .umargin__LeftRight__Small {
+        margin: 0 .5rem;
     }
 }
 
 @media screen and (max-width :18.75em) {
-    :root {
-        --card-col-gap: 2rem;
-        --card-row-gap: 2rem;
-    }
 
     /*300px**/
     html {
         font-size: 50%;
     }
 
+    .header__LogoBox {
+        top: 2rem;
+        left: 2rem;
+    }
+
     .logo {
         width: 5rem;
+    }
+
+    .header {
+        clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
     }
 
     .navigation-btn,
@@ -331,6 +438,29 @@
     .nav-link-num {
         font-size: 1.8rem;
     }
+
+    .section-about {
+        padding: 14.5rem 1rem 8rem 1rem;
+    }
+
+    .section-tours {
+        padding: 14rem 1rem 8rem 1rem;
+    }
+
+    .section-stories {
+        padding: 19rem 1rem 8rem 1rem;
+    }
+
+    .section-features {
+        padding: 10rem 1rem 8rem 1rem;
+    }
+
+    .section-booking {
+        padding: 10rem 1rem 10rem 1rem;
+    }
+
+
+
 
     .heading-main {
         font-size: 3.5rem;
@@ -361,12 +491,9 @@
     .btn,
     .btn:link,
     .btn:visited {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
-    .section-stories {
-        padding: 0 1rem;
-    }
 
     .story {
         padding: 2rem;
@@ -384,6 +511,36 @@
     .booking {
         margin: .5rem;
     }
+
+
+
+
+    .footer {
+        padding: 3rem 1rem;
+    }
+
+    .footer__logoBox {
+        margin-bottom: 2rem;
+    }
+
+    .footer__logo {
+        width: 5rem;
+    }
+
+    .footer__item {
+        display: block;
+    }
+
+    .footer__link {
+        font-size: 1.2rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.2rem;
+    }
+
+
+
 
     .umargin__Bottom__Big {
         margin-bottom: 3rem;
