@@ -273,6 +273,7 @@ body {
 
 .paragraph {
   font-size: var(--d-font_size);
+  text-align: justify;
 }
 
 .paragraph:not(:last-child) {
